@@ -86,7 +86,7 @@ target/ecommerce_project-0.0.1-SNAPSHOT.war
 
 Nhóm NOHIT gồm các thành viên:
 
-<img src='pic/2.jpg' align='right' width='21%' height='21%'></img>
+<img src='pic/1.jpg' align='right' width='21%' height='21%'></img>
 <div style='display:flex;'>
 
 - Nguyễn Đặng Trường An (team lead)
