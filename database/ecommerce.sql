@@ -1,3 +1,4 @@
+-- Summary: Script khởi tạo database ecommerce, bảng dữ liệu và dữ liệu mẫu cho website thương mại điện tử.
 -- dispose db
 
 DROP DATABASE IF EXISTS ecommerce;

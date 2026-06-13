@@ -1,3 +1,4 @@
+/* Summary: JavaScript khởi tạo sticky menu, carousel và tương tác frontend của storefront. */
 jQuery(document).ready(function ($) {
 
     // jQuery sticky Menu

@@ -1,1 +1,1 @@
-web: java -jar target/jira_project-0.0.1-SNAPSHOT.war
+web: java -jar target/ecommerce_project-0.0.1-SNAPSHOT.war

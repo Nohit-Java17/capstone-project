@@ -10,13 +10,14 @@
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.nohit</groupId>
-    <artifactId>jira_project</artifactId>
+    <artifactId>ecommerce_project</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>jira_project</name>
-    <description>Demo project for Spring Boot</description>
+    <!-- Metadata Maven của website thương mại điện tử. -->
+    <name>ecommerce_project</name>
+    <description>Website thương mại điện tử xây dựng bằng Spring Boot, Thymeleaf, Spring Security và MySQL.</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>
