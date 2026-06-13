@@ -2,11 +2,11 @@ pipeline {
     agent any
     
     environment {
-        // Telegram configre
+        // Cấu hình gửi thông báo Telegram từ credential Jenkins.
         TOKEN = credentials('telegram_token')
         CHAT_ID = credentials('telegram_chatid')
 
-        // Telegram message
+        // Nội dung thông báo mô tả commit đang được build/deploy.
         GIT_MESSAGE = sh(returnStdout: true, script: "git log -n 1 --format=%s ${GIT_COMMIT}").trim()
         GIT_AUTHOR = sh(returnStdout: true, script: "git log -n 1 --format=%ae ${GIT_COMMIT}").trim()
         GIT_COMMIT_SHORT = sh(returnStdout: true, script: "git rev-parse --short ${GIT_COMMIT}").trim()
@@ -18,7 +18,7 @@ pipeline {
         TEXT_CLEAN = "${JOB_NAME} is Cleaning"
         TEXT_RUN = "${JOB_NAME} is Running"
 
-        // Telegram parameters
+        // Trạng thái cuối pipeline gửi về Telegram.
         TEXT_SUCCESS_BUILD = "${JOB_NAME} is Success"
         TEXT_FAILURE_BUILD = "${JOB_NAME} is Failure"
     }
@@ -59,9 +59,9 @@ pipeline {
         stage('Run') {
             steps {
                 sh "curl --location --request POST 'https://api.telegram.org/bot${TOKEN}/sendMessage' --form text='${TEXT_RUN}' --form chat_id='${CHAT_ID}'"
-                sh 'docker container stop ecommerce || echo "this container does not exist"'
+                sh 'docker rm -f ecommerce || echo "this container does not exist"'
                 sh 'docker network create yan || echo "this network exist"'
-                sh 'echo y | docker container prune'
+                sh 'docker container prune -f'
                 sh 'docker run --name ecommerce --network yan --restart=unless-stopped -d yamiannephilim/ecommerce:latest'
             }
         }
