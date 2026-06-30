@@ -90,7 +90,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>5.3.39</version>
+            <version>6.2.11</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -110,12 +110,12 @@
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-core</artifactId>
-            <version>9.0.98</version>
+            <version>9.0.118</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
-            <version>5.7.13</version>
+            <version>6.5.9</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
@@ -146,7 +146,7 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
             <!-- max version -->
-            <version>5.7.14</version>
+            <version>6.2.8</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -158,7 +158,7 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
             <!-- max version -->
-            <version>1.2.13</version>
+            <version>1.5.25</version>
         </dependency>
         <!-- ignore: spring-web, spring-webmvc, spring-context -->
     </dependencies>
